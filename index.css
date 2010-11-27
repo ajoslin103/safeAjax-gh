@@ -1,0 +1,15 @@
+
+.bordered { border: 1px solid black; }
+
+.leftFloater { float: left; }
+
+.clearFloat { clear: both; }
+
+.padded { padding: 10px; }
+
+#auth-result { word-wrap: break-word; width: 600px; height: 400px; }
+
+.wrapped { word-wrap: break-word; }
+
+.centered { text-align: center; }
+

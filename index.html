@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><![endif]-->
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" rel="Stylesheet" />	
+
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+	<div id="container">
+		<header></header>
+
+		<div id="main">
+			
+			<div style="padding: 10px;">
+			<p> &nbsp;  <a href="index.html">home</a> &nbsp;  <a href="actions.html">actions</a> &nbsp;  <a href="email.html">email</a> &nbsp;  
+				<a href="protectedPage.html">pageLogin</a> &nbsp;  <a href="protectedResource.html">clickLogin</a> &nbsp; 
+				<a href="http://code.google.com/p/safeajax/">googleCode</a> &nbsp;  <a href="SA-Users.pdf">diagram</a> &nbsp; 
+			</div>
+			
+			<div class="bordered leftFloater">
+
+				<div class="bordered">
+					<p>New User Registration
+					<p style="padding: 20px;">
+						email: <input id="register-EMail" /> &nbsp; <br>
+						username: <input id="register-Username" /> &nbsp; <br>
+						password: <input id="register-Password" /> &nbsp; <br>
+						<button id="registerUser">Register User</button> &nbsp;
+						<div class="wrapped" id="registerUser-result"></div>
+				</div>
+				
+				<div class="bordered">
+					<p>Delegate Creation
+					<p style="padding: 20px;">
+						email: <input id="delegateCreate-EMail" /> &nbsp; <br>
+						username: <input id="delegateCreate-Username" /> &nbsp; <br>
+						password: <input id="delegateCreate-Password" /> &nbsp; <br>
+						<button id="delegateCreate">Create Delegate</button> &nbsp;  <br>
+						<div class="wrapped" id="delegateCreate-result"></div>
+				</div>
+				
+				<div class="bordered">
+					<p>Delegate Destruction
+					<p style="padding: 20px;">
+						email: <input id="delegateDelete-EMail" /> &nbsp; <br>
+						username: <input id="delegateDelete-Username" /> &nbsp; <br>
+						<button id="delegateDelete">Delete Delegate</button> &nbsp;  <br>
+						<div class="wrapped" id="delegateDelete-result"></div>
+				</div>
+		
+			</div>
+			
+			<div class="bordered leftFloater">
+				
+				<div class='bordered'>
+					<p>User Login
+					<p style="padding: 20px;">
+						username: <input id="loginUser-username" /> &nbsp; <br>
+						password: <input id="loginUser-password" /> &nbsp; <br>
+						<button id="loginUser">Login</button> &nbsp; 
+						<button id="logoutUser">Logout</button> &nbsp;
+						<button id="loggedIn">Logged In?</button> &nbsp; <br>
+						<div class="wrapped" id="loginUser-result"></div>
+				</div>
+					
+				<div class='bordered'>
+					<p>Login Was Forgotten
+					<p style="padding: 20px;">
+						email: <input id="userForgotten-email" /> &nbsp; <br>
+						<button id="userForgotten">EMail Login Info</button> &nbsp; <br>
+						<div class="wrapped" id="userForgotten-result"></div>
+				</div>
+					
+				<div class='bordered'>
+					<p>Password Was Forgotten
+					<p style="padding: 20px;">
+						email: <input id="forgotPassword-email" /> &nbsp; <br>
+						username: <input id="forgotPassword-username" /> &nbsp; <br>
+						<button id="forgotPassword">Forgot Password</button> &nbsp; <br>
+						<div class="wrapped" id="forgotPassword-result"></div>
+				</div>
+					
+				<div class='bordered'>
+					<p>Reset Your Password
+					<p style="padding: 20px;">
+						passwordHash: <input id="passwordForgotten-hash" /> &nbsp; <br>
+						password: <input id="passwordForgotten-password" /> &nbsp; <br>
+						<button id="passwordForgotten">Update Password</button> &nbsp; <br>
+						<div class="wrapped" id="passwordForgotten-result"></div>
+				</div>
+
+			</div>
+
+			<div class="bordered leftFloater" style="width: 400px;">
+				
+				<div class='bordered' style="width: 100%;">
+					<p>Update User Data
+					<p style="padding: 20px;">
+						key: <input size="10" id="updateKey" /> &nbsp; 
+						<select id="sa_fieldList">
+							<option value="" disabled>predefined userdata fields</option>
+							<option value="userId">userId</option>
+							<option value="creatorId">creatorId</option>
+							<option value="email">email (*)</option>
+							<option value="username">username (*)</option>
+							<option value="password">password</option>
+							<option value="access">access</option>
+							<option value="persistence">persistence (*)</option>
+							<option value="resetPwdHash">resetPwdHash (*)</option>
+							<option value="" disabled>(*) these are indexed fields</option>
+						</select> :index <br>
+						value: <input id="updateValue" /> &nbsp; <br>
+						<button id="updateIndexed">updateIndexed</button> &nbsp; 
+						<button id="updateArbitrary">updateArbitrary</button> &nbsp; <br>
+						<div class="wrapped" id="updateValue-result"></div>
+				</div>
+
+				<div class='bordered' style="width: 100%; height: 300px;">
+					<p>User Data Record
+					<div id="userDataRec" class="wrapped centered" style="width: 98%; height: 100%;"></div>
+				</div>
+					
+			</div>
+
+			<div class='clearFloat padded'>
+				auth-err: <span id="auth-err" class="aResult"></span> 
+			</div>
+			<div class='clearFloat padded wrapped'>
+				auth-result: <span id="auth-result" class="aResult"></span> 
+			</div>
+
+			<div style="position: absolute; bottom:5px;">
+				<div id="debugDiv"></div>
+				this page is based on Paul Irish's <a href="http://html5boilerplate.com/">html5 boilerplate</a>
+			</div>
+
+		</div>
+
+		<footer></footer>
+	</div> <!-- end of #container -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.js"></script>
+
+	<script src="lib/jquery.checkboxes.min.js"></script>
+	<script src="lib/jquery.selectboxes.min.js"></script>
+
+	<script type="text/javascript" src="./lib/safeAjax/safeAjax_v5.js"></script>
+
+	<!--[if lt IE 7 ]>
+	<script src="js/dd_belatedpng.js?v=1"></script>
+	<![endif]-->
+
+	<script src="index.js"></script>
+
+	<script>
+	var _gaq = [['_setAccount', 'UA-10127989-1'], ['_trackPageview']]; 
+	(function(d, t) {
+		var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		g.async = true; g.src = '//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g, s);
+	})(document, 'script');
+	</script>
+
+</body>
+</html>

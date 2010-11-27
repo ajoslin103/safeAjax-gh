@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><![endif]-->
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" rel="Stylesheet" />	
+
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="email.css">
+
+</head>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+	<div id="container">
+		<header></header>
+
+		<div id="main">
+			
+			<div style="padding: 10px;">
+			<p> &nbsp;  <a href="index.html">home</a> &nbsp;  <a href="actions.html">actions</a> &nbsp;  <a href="email.html">email</a> &nbsp;  
+				<a href="protectedPage.html">pageLogin</a> &nbsp;  <a href="protectedResource.html">clickLogin</a> &nbsp; 
+				<a href="http://code.google.com/p/safeajax/">googleCode</a> &nbsp;  <a href="SA-Users.pdf">diagram</a> &nbsp; 
+			</div>
+			
+			<div class="bordered leftFloater">
+
+				<div class="bordered">
+					<p>email handler input fields
+					<p style="padding: 20px;">
+						from name: <input id="email_name" value="" /> &nbsp; <br>
+						from domain: <input id="email_domain" value="" /> &nbsp; <br>
+						from address: <input id="email_addr" value="" /> &nbsp; <br> <br>
+						email_to: <input id="email_to" /> &nbsp; <br>
+						email_cc: <input id="email_cc" /> &nbsp; <br>
+						email_bcc: <input id="email_bcc" /> &nbsp; <br> <br>
+						subject: <input id="email_subject" /> &nbsp; <br> <br>
+						body: <textarea id="email_body"></textarea> &nbsp; <br>
+						<button id="getEMailHeader">Get Header</button> &nbsp;
+						<button id="getEMail">Get EMail</button> &nbsp;
+						<button id="sendEMail">Send EMail</button> &nbsp;
+				</div>
+		
+			</div>
+
+			<div class="bordered leftFloater">
+
+				<div class="bordered">
+					<p>email handler action result
+					<p style="padding: 10px;">
+					<div class="wrapped resultDiv" id="getEMailHandler-result"></div>
+				</div>
+				
+			</div>
+			
+			<div class="clearFloat">
+			</div>
+				
+			<div class="bordered leftFloater">
+
+				<div class="bordered wideOne">
+					<p>substitutions -- format as a JSON string (include outer {}'s)  ex: {"uname": "Frank", "pwd": "Jones"}
+					<p style="padding: 10px;">
+					<textarea rows="7" cols="100" id="email_substitutions">{}</textarea>
+				</div>
+
+			</div>
+			
+			<div style="position: absolute; bottom:5px;">
+				<div id="debugDiv"></div>
+				this page is based on Paul Irish's <a href="http://html5boilerplate.com/">html5 boilerplate</a>
+			</div>
+
+		</div>
+
+		<footer></footer>
+	</div> <!-- end of #container -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.js"></script>
+
+	<script src="lib/jquery.checkboxes.min.js"></script>
+	<script src="lib/jquery.selectboxes.min.js"></script>
+
+	<script type="text/javascript" src="./lib/safeAjax/safeAjax_v5.js"></script>
+
+	<!--[if lt IE 7 ]>
+	<script src="js/dd_belatedpng.js?v=1"></script>
+	<![endif]-->
+
+	<script src="email.js"></script>
+
+	<script>
+	var _gaq = [['_setAccount', 'UA-10127989-1'], ['_trackPageview']]; 
+	(function(d, t) {
+		var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		g.async = true; g.src = '//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g, s);
+	})(document, 'script');
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+
+.sa_pad10 { padding: 10px; }
+.sa_pad20 { padding: 20px; }
+
+.sa_css-top { float: top; }
+.sa_css-left { float: left; }
+.sa_css-right { float: right; }
+.sa_css-bottom { float: bottom; }
+.sa_css-clear { clear: both; }
+
+.sa_text-left { text-align: left; }
+.sa_text-right { text-align: right; }
+
+.sa_userFieldWidth { width: 80px; }
+
+.sa_registerNewUserDialog { min-height: 100px; }
+.sa_registerNewUserDialog .ui-resizable-handle { display: none; }
+.sa_registerNewUserDialog .ui-dialog-titlebar-close { display: none; }
+.sa_registerNewUser-explain { padding: 10px; }
+
+.sa_resetPasswordDialog { min-height: 100px; }
+.sa_resetPasswordDialog .ui-resizable-handle { display: none; }
+.sa_resetPasswordDialog .ui-dialog-titlebar-close { display: none; }
+.sa_resetPassword-explain { padding: 10px; }
+
+.sa_forgotLoginDialog { min-height: 100px; }
+.sa_forgotLoginDialog .ui-resizable-handle { display: none; }
+.sa_forgotLoginDialog .ui-dialog-titlebar-close { display: none; }
+.sa_forgotLogin-explain { padding: 10px; }
+.sa_forgotLogin-explain { padding: 10px; }
+
+.sa_forgotPasswordDialog { min-height: 100px; }
+.sa_forgotPasswordDialog .ui-resizable-handle { display: none; }
+.sa_forgotPasswordDialog .ui-dialog-titlebar-close { display: none; }
+.sa_forgotPassword-explain { padding: 10px; }
+.sa_forgotPassword-explain { padding: 10px; }
+
+.sa_userLoginDialog { min-height: 100px; }
+.sa_userLoginDialog .ui-resizable-handle { display: none; }
+.sa_userLoginDialog .ui-dialog-titlebar-close { display: none; }
+.sa_userLogin-explain { padding: 10px; }
+.sa_forgotLinks-div { float: left; }
+.sa_forgotLinks { font-size: 13px; }
+
+.sa_MesssageDialog { min-height: 100px; }
+.sa_MesssageDialog .ui-resizable-handle { display: none; }
+.sa_MesssageDialog .ui-dialog-titlebar-close { display: none; }
+.sa_Messsage-explain { padding: 10px; }
+

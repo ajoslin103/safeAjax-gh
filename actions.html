@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><![endif]-->
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" rel="Stylesheet" />	
+
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="actions.css">
+
+</head>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+	<div id="container">
+		<header>
+
+		</header>
+
+		<div id="main">
+			
+			<div style="padding: 10px;">
+			<p> &nbsp;  <a href="index.html">home</a> &nbsp;  <a href="actions.html">actions</a> &nbsp;  <a href="email.html">email</a> &nbsp;  
+				<a href="protectedPage.html">pageLogin</a> &nbsp;  <a href="protectedResource.html">clickLogin</a> &nbsp; 
+				<a href="http://code.google.com/p/safeajax/">googleCode</a> &nbsp;  <a href="SA-Users.pdf">diagram</a> &nbsp; 
+			</div>
+			
+			<div class="bordered leftFloater">
+
+				<div class="bordered">
+					<p>Finding Users
+					<p style="padding: 20px;">
+						findBy: <input id="findBy" /> &nbsp;  <br>
+						<button id="findByEMail">findByEMail</button> &nbsp; 
+						<button id="findByUsername">findByUsername</button> &nbsp; <br>
+						<button id="findByUserId">findByUserId</button> &nbsp;
+						<button id="findByPwdResetHash">findByPwdResetHash</button> &nbsp;
+						<button id="findByPersistence">findByPersistence</button> &nbsp; <br>
+				</div>
+				
+				<div class='bordered'>
+					<p>Update a User
+					<p style="padding: 20px;">
+						userId: <input id="update-UserId" /> &nbsp;  <br>
+						update: <input id="update" /> &nbsp; <input size="7" id="updateKey" /> &nbsp; :key <br>
+						updator: <input id="updatorId" /> &nbsp;  <br>
+						<button id="updateIndexed">updateIndexed</button> &nbsp; 
+						<button id="updateArbitrary">updateArbitrary</button> &nbsp; <br>
+				</div>
+					
+				<div class="bordered">
+					<p>Password Reset Request Hash
+					<p style="padding: 20px;">
+						userId: <input id="get-UserId" /> &nbsp;  <br>
+						<button id="getPasswordResetHash">getPasswordResetHash</button> &nbsp; <br> 
+				</div>
+				
+			</div>
+			
+			<div class="bordered leftFloater">
+				
+				<div class='bordered'>
+					<p>Create a User
+					<p style="padding: 20px;">
+						email: <input id="newEMail" /> &nbsp;  <br>
+						username: <input id="newUsername" /> &nbsp;  <br>
+						password: <input id="newPassword" /> &nbsp; <input type='checkbox' id="sha1" /> :sha1 <br>
+						newAccess: <input id="newAccess" /> &nbsp;  <br>
+						creatorId: <input id="creatorId" /> &nbsp;  <br>
+						<button id="createUser">createUser</button> &nbsp; <br> 
+				</div>
+					
+				<div class="bordered">
+					<p>Deleting Users
+					<p style="padding: 20px;">
+						deletee: <input id="delete-UserId" /> &nbsp;  <br>
+						deletor: <input id="deletorId" /> &nbsp;  <br>
+						<button id="deleteUser">deleteUser</button> &nbsp; <br> 
+				</div>
+		
+			</div>
+
+			<div class='clearFloat padded'>
+				auth-err: <span id="auth-err" class="aResult"></span> 
+			</div>
+			<div class='clearFloat padded wrapped'>
+				auth-result: <span id="auth-result" class="aResult"></span> 
+			</div>
+
+			<div style="position: absolute; bottom:5px;">
+				<div id="debugDiv"></div>
+				this page is based on Paul Irish's <a href="http://html5boilerplate.com/">html5 boilerplate</a>
+			</div>
+
+		</div>
+
+		<footer>
+
+		</footer>
+	</div> <!-- end of #container -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.js"></script>
+
+	<script src="lib/jquery.checkboxes.min.js"></script>
+
+	<script type="text/javascript" src="./lib/safeAjax/safeAjax_v5.js"></script>
+
+	<!--[if lt IE 7 ]>
+	<script src="js/dd_belatedpng.js?v=1"></script>
+	<![endif]-->
+
+	<script src="actions.js"></script>
+
+	<script>
+	var _gaq = [['_setAccount', 'UA-10127989-1'], ['_trackPageview']]; 
+	(function(d, t) {
+		var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		g.async = true; g.src = '//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g, s);
+	})(document, 'script');
+	</script>
+
+</body>
+</html>
